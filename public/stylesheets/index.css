@@ -1,3 +1,4 @@
-campgroundimage{
-    max-height:200px;
+.campgroundimage{
+    height:200px;
+    width:400px;
 }
