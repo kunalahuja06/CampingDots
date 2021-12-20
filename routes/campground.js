@@ -79,7 +79,7 @@ router.put('/:id',isLoggedIn,isAuthor,upload.array('image'),validateCampground,W
 router.delete('/:id',isLoggedIn,isAuthor,WrapAsync(async (req,res)=>{
     const {id}=req.params
     await Campground.findByIdAndDelete(id)
-    req.flash('success', 'succesfully campground deleted!');
+    req.flash('success', 'campground deleted!');
     res.redirect('/campgrounds')
 }))
 
