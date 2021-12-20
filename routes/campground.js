@@ -21,6 +21,11 @@ router.get('/new',isLoggedIn,(req,res)=>{
     res.render('campgrounds/new')
 })
 
+router.get('/mycampgrounds', async (req,res)=>{
+    const campgrounds= await Campground.find({'author':req.user.id})
+    res.render('campgrounds/mycampgrounds',{campgrounds})
+})
+
 router.post('/',isLoggedIn,upload.array('image'),validateCampground,WrapAsync(async(req,res,next)=>{
    const geodata=await  geocoder.forwardGeocode({
         query:req.body.campground.location,
