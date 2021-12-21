@@ -1,5 +1,5 @@
 # CampingDots
-## [Live link - CampinDots](https://campingdots.herokuapp.com/)
+## [Live link - CampingDots](https://campingdots.herokuapp.com/)
 
 CampingDots is a website to create and review campgrounds. This project is inspired by Colt Steele's Web Development Bootcamp. 
 
