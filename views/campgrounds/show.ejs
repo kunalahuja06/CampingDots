@@ -29,7 +29,8 @@
             <ul class="list-group list-group-flush">
               <li class="list-group-item">Submitted by:- <%=campground.author.username%></li>
               <li class="list-group-item text-muted"><%=campground.location%></li>
-              <li class="list-group-item">&#36; <%=campground.price%>/night</li>
+              <% const price=campground.price %> 
+              <li class="list-group-item"><span style="color:#bf0413; font-weight: bold;">&#8377;<%= price*75 %>/night</span>  <span style="font-weight: bolder;">or</span>  <span style="color:#0477bf; font-weight: bold;">&#36;<%=price%>/night</span></li>
             </ul>
             <% if(currentUser && campground.author.equals(currentUser._id)) { %> 
             <div class="card-body">
