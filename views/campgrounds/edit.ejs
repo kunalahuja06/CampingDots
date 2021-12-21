@@ -1,8 +1,8 @@
 <% layout('../layouts/boilerplate') %>
-<div class="container d-flex jutify-content-center align-items-center mt-2 mb-2">
+<div class="container" style="width: 600px;">
     <div class="row">
-     <div class="col-md-6 offset-md-6 col-xl-12 offset-xl-1">
-         <h2 class="card-title text-center ">New Campground</h5>
+     <div class="col-md-6 offset-md-6 col-xl-10 offset-xl-1">
+         <h2 class="card-title text-center ">Edit Campground</h5>
       <div class="card shadow">
           <div class="card-body">
     <form action="/campgrounds/<%=campground._id%>?_method=PUT" method="POST" novalidate class="validatedForm" enctype="multipart/form-data">
