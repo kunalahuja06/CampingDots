@@ -121,9 +121,7 @@ app.all('*',(req,res,next)=>{
     next(new ExpressError('Page Not Found',404))
 })
 
-app.use('/campgrounds/mycampgrounds',(req,res,next)=>{
-    next(new ExpressError('login to view mycampgrounds',404))
-})
+
 
 app.use((err,req,res,next)=>{
     const { statuscode=500}=err;

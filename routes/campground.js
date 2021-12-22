@@ -22,8 +22,13 @@ router.get('/new',isLoggedIn,(req,res)=>{
 })
 
 router.get('/mycampgrounds', async (req,res)=>{
+    try{
     const campgrounds= await Campground.find({'author':req.user.id})
     res.render('campgrounds/mycampgrounds',{campgrounds})
+    }
+    catch(e){
+        res.redirect('/login')
+    }
 })
 
 router.post('/',isLoggedIn,upload.array('image'),validateCampground,WrapAsync(async(req,res,next)=>{
