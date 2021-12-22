@@ -27,6 +27,7 @@ router.get('/mycampgrounds', async (req,res)=>{
     res.render('campgrounds/mycampgrounds',{campgrounds})
     }
     catch(e){
+        req.flash('login to view mycampgrouds')
         res.redirect('/login')
     }
 })
