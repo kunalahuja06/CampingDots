@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="/stylesheets/navbar.css">
 <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">CampingDots</a>
@@ -9,14 +10,24 @@
             <a class="nav-link" href="/">Home</a>
             <a class="nav-link" href="/campgrounds">campgrounds</a>
             <a class="nav-link" href="/campgrounds/new">new campground</a>
+            <a class="navlink" href="#"></a>
         </div>
         <div class="navbar-nav ms-auto">
           <% if(!currentUser){%> 
           <a class="nav-link" href="/login">login</a>
           <a class="nav-link" href="/register">register</a>
-          <% } else { %> 
-          <a class="nav-link" href="/campgrounds/mycampgrounds">My Campgrounds</a>
-          <a class="nav-link" href="/logout">logout</a>
+          <% } else { %>
+            <div class="dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false" >
+                <span class='fas fa-user-circle ' style='font-size:15px'></span> <%=currentUser.username%>
+              </a>
+              <div class="dropdown-menu bg-dark dropdownmenu" aria-labelledby="dropdownMenuLink">
+                <a class="dropdown-item nav-link navlink" href="/users/edit"><span class='fas fa-user-edit' style='font-size:14px'></span>  Edit Profile</a>
+                <a class="dropdown-item nav-link navlink" href="/campgrounds/mycampgrounds"><span class='fas fa-user-cog' style='font-size:14px'></span>  My Campgrounds</a>
+                <a class="dropdown-item nav-link navlink" href="/logout"><span class='fas fa-user-minus' style='font-size:14px'></span>  logout</a>
+              </div>
+            </div>
           <% } %> 
         </div>
       </div>
