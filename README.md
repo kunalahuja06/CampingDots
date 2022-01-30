@@ -3,7 +3,7 @@
 
 CampingDots is a website to create and review campgrounds. This project is inspired by Colt Steele's Web Development Bootcamp. 
 
-This project is buit using NodeJS, ExpressJS, MongoDB.
+This project is built using NodeJS, ExpressJS, MongoDB.
 
 ![2021-12-21 (1)](https://user-images.githubusercontent.com/52367650/146890012-bdf67344-765a-4fe2-ad61-4636d2c769fc.png)
 
