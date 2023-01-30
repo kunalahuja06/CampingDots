@@ -35,8 +35,8 @@ const dbUrl=process.env.DB_URL
 //   console.log("Dataase Up and running")
 // });
 
-require("dotenv").config();;
-const uri = process.env.DB_URL || 'mongodb://localhost:27017/yelp-camp'
+require("dotenv").config();
+const uri = process.env.DB_URL
 mongoose
   .connect(uri, {
     useCreateIndex: true,
