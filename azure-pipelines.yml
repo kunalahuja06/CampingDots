@@ -17,17 +17,18 @@ steps:
 
 - script: |
     npm install
-    npm build
+    npm run build
   displayName: 'npm install and build'
 - task: ArchiveFiles@2
   inputs:
-    rootFolderOrFile: '$(Build.BinariesDirectory)'
+    rootFolderOrFile: '$(System.DefaultWorkingDirectory)'
     includeRootFolder: true
     archiveType: 'zip'
-    archiveFile: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
+    archiveFile: '$(Build.ArtifactStagingDirectory)/node.zip'
     replaceExistingArchive: true
 - task: PublishBuildArtifacts@1
   inputs:
     PathtoPublish: '$(Build.ArtifactStagingDirectory)'
-    ArtifactName: 'Drop'
+    ArtifactName: 'drop'
     publishLocation: 'Container'
+
