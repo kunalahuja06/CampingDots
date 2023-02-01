@@ -7,7 +7,7 @@ const multer=require('multer')
 const {storage, cloudinary}=require('../cloudinary')
 const upload= multer({storage})
 const mbxGeocoding=require('@mapbox/mapbox-sdk/services/geocoding')
-const mbxToken=process.env.MAPBOX_TOKEN
+const mbxToken='pk.eyJ1Ijoia3VuYWxhaHVqYSIsImEiOiJja3RlaWM0dGgwemhiMnFyd2IzNnhzMnNiIn0.CiWMQyk0mh9mMePYQ7Dx_g'
 const geocoder=mbxGeocoding({accessToken:mbxToken})
 
 
