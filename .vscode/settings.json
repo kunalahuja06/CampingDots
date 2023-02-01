@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/3004211e-4811-4e4a-bfe9-c8268c1366dc/AppServices/subscriptions/3004211e-4811-4e4a-bfe9-c8268c1366dc/resourceGroups/Kunal_Ahuja_Personal/providers/Microsoft.Web/sites/campingdots",
+    "appService.deploySubpath": "."
+}

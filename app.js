@@ -27,7 +27,7 @@ const MongoStore = require("connect-mongo");
 
 
 // || 'mongodb://localhost:27017/yelp-camp'
-const dbUrl=process.env.DB_URL
+const dbUrl='mongodb+srv://KunalAhuja:Admin%40Kunal06@cluster0.dkpvo.mongodb.net/campingdots?retryWrites=true&w=majority&'
 // mongoose.connect(dbUrl, {useNewUrlParser: true,useUnifiedTopology: true,useFindAndModify:false,})
 // const db = mongoose.connection;
 // db.on('error', console.error.bind(console, 'connection error:'));
@@ -36,7 +36,7 @@ const dbUrl=process.env.DB_URL
 // });
 
 require("dotenv").config();
-const uri = process.env.DB_URL
+const uri ='mongodb+srv://KunalAhuja:Admin%40Kunal06@cluster0.dkpvo.mongodb.net/campingdots?retryWrites=true&w=majority&'
 mongoose
   .connect(uri, {
     useCreateIndex: true,
@@ -54,7 +54,7 @@ mongoose
   });
 
 
-const secret=process.env.SECRET || 'thisisasecret'
+const secret= 'thisisasecret'
 
 const store=new MongoStore({
     mongoUrl:uri,
@@ -131,7 +131,7 @@ app.use((err,req,res,next)=>{
     }
     res.status(statuscode).render('error',{err})
 })
-const port=process.env.PORT || 3000
+const port=3000
 app.listen(port,()=>{
     console.log(`Connected on port ${port}`)
 })
