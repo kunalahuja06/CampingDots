@@ -18,7 +18,7 @@ This project is built using NodeJS, ExpressJS, MongoDB.
 ## Run it locally
 1. Install MongoDB, NodeJS.
 2. Clone this repo.
-3. Inatll project dependencies.
+3. Install project dependencies.
 ```
 cd campingdots
 npm install
