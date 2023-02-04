@@ -1,5 +1,5 @@
 # CampingDots
-## [Live link - CampingDots](https://campingdots.herokuapp.com/)
+## [Live link - CampingDots](https://campingdots.azurewebsites.net/)
 
 CampingDots is a website to create and review campgrounds. This project is inspired by Colt Steele's Web Development Bootcamp. 
 
@@ -17,21 +17,15 @@ This project is built using NodeJS, ExpressJS, MongoDB.
 #
 ## Run it locally
 1. Install MongoDB, NodeJS.
-2. Create account on Cloudinary and MapBox to get an API key and secret.
-3. Clone this repo.
+2. Clone this repo.
+3. Inatll project dependencies.
 ```
 cd campingdots
 npm install
 ```
-4. Create a .env file in the root of the project and add the following:
 ```
-DB_URL='<url>'
-API_KEY=''<key>
-API_SECRET='<secret>'
-```
-5. Run mongod.
-6. In terminal, run
-```nodemon app.js``` 
-7. Then go to localhost:3000.
+4. In terminal, run
+```npm start``` 
+5. Then go to localhost:3000.
 
 
